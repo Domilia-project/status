@@ -41,8 +41,8 @@ status-website:
       href: https://www.domilia.ca
     - title: État des services
       href: /
-  logoUrl: https://www.domilia.ca/logo.png   # ⚠️ remplacer par l'URL du vrai logo Domilia
-  favicon: https://www.domilia.ca/favicon.ico
+  logoUrl: https://www.domilia.ca/domilia-with-logo.svg
+  favicon: https://www.domilia.ca/favicon.svg
   theme: light
   timezone: America/Toronto
 
