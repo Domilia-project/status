@@ -1,31 +1,93 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Domilia — Configuration Upptime (page d'état publique)
+# Source versionnée dans le repo principal : docs/security/status-page.upptimerc.yml
+# Contrôle documenté : docs/security/status-page.md
+# Réf. Upptime : https://upptime.js.org/docs/configuration
 
+owner: Domilia-project
+repo: status
+
+# ── Services surveillés (composants visibles publiquement) ──────────────
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: Site web
+    url: https://www.domilia.ca
 
+  - name: Application
+    url: https://app.domilia.ca
+
+  - name: API
+    url: https://api.domilia.ca/health
+    # /health = liveness publique, renvoie 200 dès que le process HTTP tourne
+    # (backend_new/src/bootstrap.ts). Reflète « le service répond ».
+
+  # Décommenter pour une tuile « API incluant la base de données ».
+  # /ready renvoie 503 tant que la DB n'est pas connectée → montrera
+  # brièvement « dégradé » pendant les cold starts / déploiements (signal honnête).
+  # - name: API — base de données
+  #   url: https://api.domilia.ca/ready
+
+  - name: Signature électronique
+    url: https://signature.domilia.ca
+
+# ── Site public généré ─────────────────────────────────────────────────
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.domilia.ca
+  name: Domilia — État des services
+  introTitle: "**État des services Domilia**"
+  introMessage: >-
+    Disponibilité en temps réel des services Domilia et historique des incidents.
+    Pour signaler un problème, écrivez à support@domilia.ca.
   navbar:
-    - title: Status
+    - title: Accueil
+      href: https://www.domilia.ca
+    - title: État des services
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+  logoUrl: https://www.domilia.ca/logo.png   # ⚠️ remplacer par l'URL du vrai logo Domilia
+  favicon: https://www.domilia.ca/favicon.ico
+  theme: light
+  timezone: America/Toronto
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# ── Notifications d'incident (optionnel — via secrets Actions) ──────────
+# notifications:
+#   - type: email
+#     smtpHost: smtp.sendgrid.net        # relais SMTP SendGrid déjà en place
+#     smtpPort: 587
+#     smtpUsername: apikey
+#     smtpPassword: $SMTP_PASSWORD        # secret Actions
+#     smtpFrom: "Domilia Status <status@domilia.ca>"
+#   - type: slack
+
+assignees:
+  - vincentgendreau
+
+# ── Localisation française de l'interface ──────────────────────────────
+i18n:
+  activeIncidents: Incidents en cours
+  allSystemsOperational: Tous les systèmes sont opérationnels
+  incidents: Incidents
+  incidentReport: "#$NUMBER : $TITLE"
+  incidentTitle: Incident
+  incidentDetails: Détails de l'incident
+  navCommits: Commits
+  navIncidents: Incidents
+  navDashboard: Tableau de bord
+  operational: Opérationnel
+  degradedPerformance: Performance dégradée
+  partialOutage: Panne partielle
+  majorOutage: Panne majeure
+  down: Hors service
+  up: En service
+  live: EN DIRECT
+  pastIncidents: Historique des incidents
+  overallUptime: Disponibilité globale
+  overallStatus: État global
+  lastXdays: "$DAYS derniers jours"
+  responseTime: Temps de réponse
+  uptime: Disponibilité
+  fastResponseTime: Temps de réponse rapide
+  slowResponseTime: Temps de réponse lent
+  noData: Aucune donnée
+  createIssues: Créer des incidents
+  hoursMinutesSeconds: "$HOURS h $MINUTES min $SECONDS s"
+  poweredBy: "Propulsé par $UPPTIME"
+
+# Cadence de sonde (cron) laissée au défaut Upptime (~5 min).
