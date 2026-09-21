@@ -13,7 +13,7 @@
     "time": 266,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 247,
+    "timeMonth": 210,
     "timeYear": 266,
     "dailyMinutesDown": {
       "2026-08-25": 369
@@ -33,7 +33,7 @@
     "time": 240,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 194,
+    "timeMonth": 197,
     "timeYear": 240,
     "dailyMinutesDown": {
       "2026-08-25": 369
@@ -45,15 +45,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.domilia.ca.ico",
     "slug": "api",
     "status": "up",
-    "uptime": "99.56%",
+    "uptime": "99.57%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.13%",
-    "uptimeYear": "99.56%",
+    "uptimeYear": "99.57%",
     "time": 505,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 1066,
+    "timeMonth": 1142,
     "timeYear": 505,
     "dailyMinutesDown": {
       "2026-08-25": 383
@@ -73,7 +73,7 @@
     "time": 159,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 133,
+    "timeMonth": 131,
     "timeYear": 159,
     "dailyMinutesDown": {
       "2026-08-25": 369
