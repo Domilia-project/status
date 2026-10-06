@@ -15,15 +15,12 @@ sites:
     url: https://app.domilia.ca
 
   - name: API
-    url: https://api.domilia.ca/health
-    # /health = liveness publique, renvoie 200 dès que le process HTTP tourne
-    # (backend_new/src/bootstrap.ts). Reflète « le service répond ».
-
-  # Décommenter pour une tuile « API incluant la base de données ».
-  # /ready renvoie 503 tant que la DB n'est pas connectée → montrera
-  # brièvement « dégradé » pendant les cold starts / déploiements (signal honnête).
-  # - name: API — base de données
-  #   url: https://api.domilia.ca/ready
+    url: https://api.domilia.ca/ready
+    # /ready renvoie 200 seulement si la base, Redis, les services et les
+    # migrations sont prêts, 503 sinon. /health répond 200 dès que le process
+    # HTTP tourne, même base tombée : une page d'état qui le sonde affiche
+    # « en service » pendant une panne réelle. Un 503 bref pendant un
+    # déploiement est un signal honnête, pas un faux positif.
 
   - name: Signature électronique
     url: https://app.domilia.ca/signature
@@ -57,6 +54,14 @@ status-website:
 #     smtpPassword: $SMTP_PASSWORD        # secret Actions
 #     smtpFrom: "Domilia Status <status@domilia.ca>"
 #   - type: slack
+
+# ── Secrets transmis à Upptime (liste d'autorisation) ───────────────────
+# Liste vide = aucun secret du dépôt n'est remis aux workflows de sonde.
+# Sans cette clé, Upptime transmet une centaine de noms par défaut ; avant
+# la v1.43.11 il transmettait TOUS les secrets, ce que GitHub a fini par
+# bloquer comme workflow suspect (sondes arrêtées du 30 août au 5 octobre 2026).
+# Pour activer des notifications : ajouter ici le nom exact de chaque secret.
+secrets: []
 
 assignees:
   - vincentgendreau
