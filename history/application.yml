@@ -1,7 +1,7 @@
 url: https://app.domilia.ca
-status: up
-code: 200
-responseTime: 253
-lastUpdated: 2026-11-21T23:06:02.293Z
+status: down
+code: 403
+responseTime: 147
+lastUpdated: 2026-11-22T01:15:00.244Z
 startTime: 2026-07-21T14:59:09.324Z
 generator: Upptime <https://github.com/upptime/upptime>
