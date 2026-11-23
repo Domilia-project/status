@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.79%",
-    "time": 283,
-    "timeDay": 316,
-    "timeWeek": 212,
-    "timeMonth": 316,
-    "timeYear": 283,
+    "time": 284,
+    "timeDay": 387,
+    "timeWeek": 240,
+    "timeMonth": 319,
+    "timeYear": 284,
     "dailyMinutesDown": {
       "2026-08-25": 369
     }
@@ -26,18 +26,17 @@
     "slug": "application",
     "status": "up",
     "uptime": "99.79%",
-    "uptimeDay": "99.42%",
-    "uptimeWeek": "99.92%",
-    "uptimeMonth": "99.98%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
     "uptimeYear": "99.79%",
-    "time": 683,
-    "timeDay": 183,
-    "timeWeek": 174,
-    "timeMonth": 1514,
-    "timeYear": 683,
+    "time": 679,
+    "timeDay": 191,
+    "timeWeek": 179,
+    "timeMonth": 1518,
+    "timeYear": 679,
     "dailyMinutesDown": {
-      "2026-08-25": 369,
-      "2026-11-22": 8
+      "2026-08-25": 369
     }
   },
   {
@@ -46,19 +45,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.domilia.ca.ico",
     "slug": "api",
     "status": "up",
-    "uptime": "99.78%",
-    "uptimeDay": "99.43%",
-    "uptimeWeek": "99.92%",
-    "uptimeMonth": "99.98%",
-    "uptimeYear": "99.78%",
+    "uptime": "99.79%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "99.79%",
     "time": 355,
-    "timeDay": 193,
-    "timeWeek": 177,
-    "timeMonth": 200,
+    "timeDay": 212,
+    "timeWeek": 193,
+    "timeMonth": 206,
     "timeYear": 355,
     "dailyMinutesDown": {
-      "2026-08-25": 383,
-      "2026-11-22": 8
+      "2026-08-25": 383
     }
   },
   {
@@ -68,18 +66,17 @@
     "slug": "signature-electronique",
     "status": "up",
     "uptime": "99.79%",
-    "uptimeDay": "99.44%",
-    "uptimeWeek": "99.92%",
-    "uptimeMonth": "99.98%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
     "uptimeYear": "99.79%",
     "time": 155,
-    "timeDay": 143,
-    "timeWeek": 122,
-    "timeMonth": 129,
+    "timeDay": 155,
+    "timeWeek": 138,
+    "timeMonth": 134,
     "timeYear": 155,
     "dailyMinutesDown": {
-      "2026-08-25": 369,
-      "2026-11-22": 8
+      "2026-08-25": 369
     }
   }
 ]
